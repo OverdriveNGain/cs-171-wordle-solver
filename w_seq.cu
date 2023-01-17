@@ -9,7 +9,7 @@
 
 #define VERBOSE 0
 #define PRINT_DEVICE_SETTINGS 0
-#define REPETITIONS 500
+#define REPETITIONS 1000
 #define RANDOM_SEED 100
 
 char *answer;
