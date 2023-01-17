@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cuda.h>
+// #include <cuda.h>
 
 #define WORDLE_WORD_LIST_MAX_COUNT 13000
 #define WORDLE_WORD_LIST_FILE_NAME "valid-wordle-words.txt"
