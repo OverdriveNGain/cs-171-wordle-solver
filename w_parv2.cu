@@ -255,8 +255,8 @@ int get_next_word(char **memory, char **valids_d, int **char_count, int **char_c
     cudaMemcpy(char_count_atleast_flag_d, *char_count_atleast_flag, 26 * sizeof(int), cudaMemcpyHostToDevice);
 
     // Launch kernel
-    dim3 dimBlock(256, 1, 1);
-    dim3 dimGrid(ceil((float)WORDLE_WORD_LIST_MAX_COUNT/256), 1, 1);
+    dim3 dimBlock(1024, 1, 1);
+    dim3 dimGrid(ceil((float)WORDLE_WORD_LIST_MAX_COUNT/1024), 1, 1);
 
     compute_score<<< dimGrid, dimBlock >>>
     (*valids_d, memory_d, char_count_d, char_count_atleast_flag_d, scores_d, valid_word_count);
